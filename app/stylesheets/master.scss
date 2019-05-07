@@ -1,0 +1,200 @@
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web);
+
+$bold-brand: #22416c;
+$opaque-brand: #f7f7f7;
+
+// Some useful atomic CSS
+.inline-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.bold-brand-color {
+  color: $bold-brand;
+}
+
+.bold-brand-bg {
+  background-color: $bold-brand;
+  transition: all 300ms ease;
+  cursor: pointer;
+  &:hover {
+    background-color: darken($opaque-brand, 50);
+  }
+}
+
+.text-overflow-clip {
+  text-overflow: ellipsis;
+  align-self: flex-start;
+}
+
+.opaque-brand-color {
+  color: $opaque-brand;
+}
+
+.opaque-brand-bg {
+  background-color: $opaque-brand;
+}
+// atom css fin
+
+// Main styling
+.wrapper-fix {
+  overflow-x: hidden;
+}
+
+html {
+  background-color: $opaque-brand;
+  color: $bold-brand;
+  body {
+    .wrapper{
+      text-align: center;
+      margin: 200px auto;
+
+    }
+    main, header {
+      background-color: $opaque-brand;
+      font-family: "Titillium Web", Helvetica Neue, Helvetica, Arial, sans-serif;
+    }
+    header {
+      padding: 20px 40px;
+      h1 {
+        color: $bold-brand;
+      }
+    }
+    main {
+      .key-datum {
+        display:        flex;
+        flex-direction: row;
+        margin-bottom:  2px;
+        p {
+          margin: 0;
+          margin-left: 5px;
+        }
+        svg {
+          position: relative;
+          top:      2px;
+        }
+      }
+      table {
+        .col-box {
+          min-width: 50px;
+          max-width: 50px;
+          padding: 2px 4px;
+        }
+        tr th {
+          color: $bold-brand;
+          font-weight: bold;
+          min-width: 80px;
+        }
+        .row-header {
+          min-width: 60px;
+        }
+        td {
+          transition: all 300s ease;
+        }
+      }
+      .table-viz {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        max-width: 960px;
+        .table-data {
+          width: 100%;
+          transition: all 360ms ease;
+          .table-datum {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            top: 5px;
+          }
+        }
+	  }
+	  .list-viz {
+        .links {
+          text-decoration: underline;
+        }
+        .list-data {
+          background-color: darken($opaque-brand, 5);
+          .data-title {
+            color: lighten($bold-brand, 40);
+            font-weight: bold;
+          }
+          .toc {
+            height: 250px;
+            overflow: scroll;
+          }
+        }
+        // Dot leaders
+        ul.leaders {
+            max-width: 60em;
+            padding: 0;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            list-style: none;
+            .blocks {
+              margin-right: 15px;
+            }
+            .data-title {
+              font-size: 18px;
+            }
+        }
+        // ul.leaders li {
+        //   display: flex;
+        //   flex-direction: row;
+        //   justify-content: space-between;
+        // }
+        // ul.leaders li:before {
+        //     float: left;
+        //     width: 0;
+        //     margin-left: -210px;
+        //     white-space: nowrap;
+        //     content:
+        //  ". . . . . . . . . . . . . . . . . . . . . . . . . . . "
+        //  ". . . . . . . . . . . . . . . . . . . . . . . . . . . "
+        //  ". . . . . . . . . . . . . . . . . . . . . . . . . . . "
+        //  ". . . . . . . . . . . . . . . . . . . . . . . . . . . "
+        //  ". . . . . . . . . . . . . . . . . . . . . . . . . . . "
+        //  ". . . . . . . . . . . . . . . . . . . . . . . . . . . "
+        //  ". . . . . . . . . . . . . . . . . . . . . . . . . . . "}
+        // ul.leaders span:first-child {
+        //     float: left;
+        //     padding-right: 0.11em;
+        //     order: -1;}
+        // ul.leaders span + span {
+        //     float: right;
+        //     padding-left: 0.33em;}
+        // Dot leaders fin
+	  }
+        .table-detail {
+          background-color: $bold-brand !important;
+          color: $opaque-brand;
+          padding-bottom: 5px;
+          width: 35%;
+          transition: all 360ms ease;
+          position:fixed;
+          overflow-y: scroll;
+          height: 100%;
+          top:5px;
+          right:5px;
+          z-index:100;
+          .data-title {
+            color: lighten($bold-brand, 40);
+            font-weight: bold;
+          }
+        }
+    }
+    footer {
+      background-color: darken($opaque-brand, 20);
+      min-height: 300px;
+      padding: 20px 40px;
+    }
+  }
+  .footer_logo {
+    color: $opaque-brand;
+    text-align: center;
+    padding: 20px 40px;
+    img {
+      max-width: 300px;
+    }
+  }
+}
