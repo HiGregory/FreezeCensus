@@ -13,3 +13,5 @@ Freeze is a winning ABA Justice Hack 2018 idea based on using technology and des
 # Configuring
 
 This app is an HTML/CSS/JS app that has slight interactions but purpose is to store data.
+
+This is a refork of a Police Census project that was open-source several years back.
